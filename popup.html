@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body style="width: 300px; height: 375px; background-color:#2b2e2c;">
+<form>
+<div class="form-group" style="margin: 15px;">
+<label for='siteAdd' style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-weight: 600;color: beige;">Add Site and Duration</label>
+<input class="form-control" id="siteAdd" type="text" aria-describedby="addHelp">  
+<small id="addHelp" class="form-text text-muted">Name : Duration in minutes [Optional]</small>
+<div style="margin-top: 3px;">
+<span data-toggle="tooltip" data-placement="top" title="Sample Input - Google : 10"><button id="add" class="btn btn-outline-success btn-sm">Add</button></span>
+<span style="margin-left: 5px;" data-toggle="tooltip" data-placement="top" title="Show All Added Sites and Duration."><button id="show" type="button" class="btn btn-outline-info btn-sm">Show Sites</button></span>
+</div>
+</div>
+
+<div class="form-group" style="margin: 15px;">
+    <label for='siteRemove' style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-weight: 600;color: beige;">Remove Site</label>
+    <input class="form-control" id="siteRemove" type="text" aria-describedby="removeHelp">  
+    <small id="removeHelp" class="form-text text-muted">Enter only Name</small>
+    <div style="margin-top: 3px;">
+    <span data-toggle="tooltip" data-placement="top" title="Sample Input - Google"><button id="remove" class="btn btn-outline-danger btn-sm">Remove</button></span>
+    <span style="margin-left: 5px;" data-toggle="tooltip" data-placement="top" title="This will remove all saved Usage Data and Settings. Proceed with Caution!" ><button id="removeAll" disabled type="button" class="btn btn-dark btn-sm">Purge Data</button></span>
+    </div>
+</div>
+
+<div class="form-group form-check" style="margin: 15px;">
+    <span><input type="checkbox" class="form-check-input" id="trackOnly"></span>
+    <label class="form-check-label"  data-toggle="tooltip" data-placement="top" title="This will disable Blocking feature and only track Usage." for="trackOnly" style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-weight:600;color: beige;">Track Only</label>
+  </div>
+
+<div style="margin: 15px;"><span><button id="start" type="button" class="btn btn-outline-success btn-sm">Start</button></span>
+<span style="margin-left: 5px;"><button id="stop" disabled type="button" class="btn btn-outline-danger btn-sm">Stop</button></span>
+<span style="margin-left: 5px;" data-toggle="tooltip" data-placement="top" title="Show Graphical Site Usage Statistics."><button id="showStats" type="button" class="btn btn-outline-info btn-sm">Show Usage</button></span>
+</div>
+</form>
+<script src="jquery-3.5.0.min.js"></script>    
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
